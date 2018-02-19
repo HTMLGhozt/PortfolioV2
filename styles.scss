@@ -1,0 +1,60 @@
+@import 'reset';
+@import 'palate';
+
+$font: 'Roboto', sans-serif;
+
+%noDecore {
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  height: 100vh;
+  background-color: $black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  strong {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    color: $offWhite;
+    font-family: $font;
+    font-size: 3em;
+  }
+}
+
+.main-navigation {
+  position: absolute;
+  display: flex;
+  top: 0;
+  padding: 30px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  a {
+    @extend %noDecore;
+    color: $ruby;
+    font-family: $font;
+    font-size: 1.2em;
+  }
+  span {
+    flex: 7;
+  }
+
+  > .main-navigation__links {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    
+    > a:hover {
+      color: $offWhite;
+    }
+  }
+}
