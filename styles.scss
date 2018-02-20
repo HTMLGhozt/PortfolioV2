@@ -1,7 +1,14 @@
 @import 'reset';
 @import 'palate';
 
-$font: 'Roboto', sans-serif;
+$body: 1.2em;
+$title: 3em;
+
+@mixin createFont ($size: $body, $color: $ruby, $ff: ('Roboto', sans-serif)) {
+  color: $color;
+  font-family: $ff;
+  font-size: $size;
+}
 
 %noDecore {
   text-decoration: none;
@@ -11,50 +18,69 @@ body {
   position: relative;
 }
 
-header {
+.main-menu {
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  a {
+    @extend %noDecore;
+    @include createFont;
+  }
+}
+.main-navigation > a {
+  padding: 20px;
+  &:hover {
+    color: $offWhite;
+  }
+}
+section {
   height: 100vh;
   background-color: $black;
-
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home,
+.about {
+  display: none;
+  flex-direction: column;
+}
+.home span { 
+  @include createFont($title, $offWhite);
+  font-weight: bold;
 
-  strong {
-    display: flex;
-    flex-direction: column;
-  }
-
-  span {
-    color: $offWhite;
-    font-family: $font;
-    font-size: 3em;
+  &:first-of-type {
+    line-height: 2em;
+    color: $ruby;
   }
 }
+.about {
+  position: relative;
+  width: 700px;
+  padding: 0 30px;
+  margin-top: 100px;
 
-.main-navigation {
-  position: absolute;
-  display: flex;
-  top: 0;
-  padding: 30px 30px;
-  width: 100%;
-  box-sizing: border-box;
-  a {
-    @extend %noDecore;
-    color: $ruby;
-    font-family: $font;
-    font-size: 1.2em;
-  }
-  span {
-    flex: 7;
-  }
-
-  > .main-navigation__links {
-    flex: 2;
-    display: flex;
-    justify-content: space-between;
-    
-    > a:hover {
-      color: $offWhite;
+  outline: 5px solid $dimGrey;
+  outline-offset: 8px;
+  border: 3px solid $lightGrey;
+  p {
+    @include createFont($body, $offWhite);
+    line-height: 1.3em;
+    text-align: justify;
+    &:nth-of-type(2) {
+      margin: 0;
     }
   }
+  h1 {
+    @include createFont($title);
+    position: absolute;
+    top: -115px;
+  }
+}
+.active {
+  display: flex;
 }
