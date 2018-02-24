@@ -3,16 +3,13 @@ body,
 ul,
 ol {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 .main-menu a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 body {
-  position: relative;
-}
+  position: relative; }
 
 .main-menu {
   width: 100%;
@@ -21,75 +18,75 @@ body {
   justify-content: space-between;
   box-sizing: border-box;
   position: absolute;
-  top: 0;
-}
-.main-menu a {
-  color: #9c1428;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2em;
-}
+  top: 0; }
+  .main-menu a {
+    color: #9c1428;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em; }
 
 .main-navigation > a {
-  padding: 20px;
-}
-.main-navigation > a:hover {
-  color: #c8c8c8;
-}
+  padding: 20px; }
+  .main-navigation > a:hover {
+    color: #c8c8c8; }
 
 section {
   height: 100vh;
   background-color: #222020;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .home,
-.about {
+.about,
+.contact {
   display: none;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .home span {
   color: #c8c8c8;
   font-family: "Roboto", sans-serif;
   font-size: 3em;
-  font-weight: bold;
-}
-.home span:first-of-type {
-  line-height: 2em;
-  color: #9c1428;
-}
+  font-weight: bold; }
+  .home span:first-of-type {
+    line-height: 2em;
+    color: #9c1428; }
 
-.about {
+.about,
+.contact {
   position: relative;
   width: 700px;
   padding: 0 30px;
   margin-top: 100px;
   outline: 5px solid #393738;
   outline-offset: 8px;
-  border: 3px solid #7d7d7d;
-}
-.about p {
-  color: #c8c8c8;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2em;
-  line-height: 1.3em;
-  text-align: justify;
-}
-.about p:nth-of-type(2) {
-  margin: 0;
-}
-.about h1 {
-  color: #9c1428;
-  font-family: "Roboto", sans-serif;
-  font-size: 3em;
-  position: absolute;
-  top: -115px;
-}
+  border: 3px solid #7d7d7d; }
+  .about p,
+  .contact p {
+    color: #c8c8c8;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    text-align: justify; }
+    .about p:nth-of-type(2),
+    .contact p:nth-of-type(2) {
+      margin: 0; }
+  .about h1,
+  .contact h1 {
+    color: #9c1428;
+    font-family: "Roboto", sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: -115px; }
+
+.contact {
+  width: 400px;
+  padding: 20px; }
+  .contact #submit {
+    width: 100px; }
+  .contact input {
+    margin: 0 0 10px; }
 
 .active {
-  display: flex;
-}
+  display: flex; }
 
 /*# sourceMappingURL=styles.css.map */

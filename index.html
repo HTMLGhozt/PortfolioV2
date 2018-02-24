@@ -18,13 +18,13 @@
     </nav>
   </header>
   <section>
-    <div class="home">
+    <div class="active home">
       <span>Hello, World!</span>
       <span>I'm Thomas,</span>
       <span>a Full-Stack</span>
       <span>Developer</span>
     </div>
-    <div class="about active">
+    <div class="about">
       <h1>About Me</h1>
       <p>
         'Hello, World!' is a programming convention often
@@ -52,6 +52,15 @@
         a familiarity with C and Python as well.
       </p>
     </div>
+    <form class="contact" method="post">
+      <h1>Contact Me</h1>
+      <input type="text" placeholder="Your name" tabindex="1" required autofocus />
+      <input type="email" placeholder="Your email address" tabindex="2" />
+      <input type="text" placeholder="Your message title" tabindex="3" />
+      <textarea placeholder="Type your message here..." rows="3"></textarea>
+      <input type="submit" value="submit" id="submit" />
+    </form>
   </section>
+  <script type="text/javascript" src="./scripts.js"></script>
 </body>
 </html>

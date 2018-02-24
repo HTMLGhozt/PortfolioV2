@@ -45,7 +45,8 @@ section {
   align-items: center;
 }
 .home,
-.about {
+.about,
+.contact {
   display: none;
   flex-direction: column;
 }
@@ -58,7 +59,8 @@ section {
     color: $ruby;
   }
 }
-.about {
+.about, 
+.contact {
   position: relative;
   width: 700px;
   padding: 0 30px;
@@ -79,6 +81,16 @@ section {
     @include createFont($title);
     position: absolute;
     top: -115px;
+  }
+}
+.contact {
+  width: 400px;
+  padding: 20px;
+  #submit {
+    width: 100px;
+  }
+  input {
+    margin: 0 0 10px;
   }
 }
 .active {
